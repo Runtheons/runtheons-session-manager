@@ -1,19 +1,19 @@
 {
-  "name": "@runtheons/sessiona-manager",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Zexal0807/runtheons-session-manager.git"
-  },
-  "author": "Zexal0807",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Zexal0807/runtheons-session-manager/issues"
-  },
-  "homepage": "https://github.com/Zexal0807/runtheons-session-manager#readme"
+    "name": "@runtheons/session-manager",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Zexal0807/runtheons-session-manager.git"
+    },
+    "author": "Zexal0807",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Zexal0807/runtheons-session-manager/issues"
+    },
+    "homepage": "https://github.com/Zexal0807/runtheons-session-manager#readme"
 }
