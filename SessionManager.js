@@ -3,7 +3,7 @@ const key = "RUNTHEONS";
 
 module.exports = new class SessionManager {
 
-    createSession(data, res) {
+    createSession(data) {
         var token = jwt.sign(
             data,
             key, {
