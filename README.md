@@ -3,8 +3,8 @@
 This reposity manage the session of Runtheons BackEnd
 
 # Usage
-- [generateToken](https://github.com/Zexal0807/runtheons-session-managerp#generateToken "generateToken")
-- [extractData](https://github.com/Zexal0807/runtheons-session-managerp#extractData "extractData")
+- [generateToken](https://github.com/Zexal0807/runtheons-session-manager#generateToken "generateToken")
+- [extractData](https://github.com/Zexal0807/runtheons-session-manager#extractData "extractData")
 
 ## generateToken
 
