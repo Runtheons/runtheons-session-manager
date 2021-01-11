@@ -1,20 +1,20 @@
 {
-    "name": "@runtheons/session-manager",
-    "version": "1.0.2",
-    "description": "",
-    "main": "index.js",
-    "scripts": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Zexal0807/runtheons-session-manager.git"
-    },
-    "author": "Zexal0807",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/Zexal0807/runtheons-session-manager/issues"
-    },
-    "homepage": "https://github.com/Zexal0807/runtheons-session-manager#readme",
-    "dependencies": {
-        "jsonwebtoken": "^8.5.1"
-    }
+	"name": "@runtheons/session-manager",
+	"version": "1.0.2",
+	"description": "",
+	"main": "index.js",
+	"scripts": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Zexal0807/runtheons-session-manager.git"
+	},
+	"author": "Zexal0807",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Zexal0807/runtheons-session-manager/issues"
+	},
+	"homepage": "https://github.com/Zexal0807/runtheons-session-manager#readme",
+	"dependencies": {
+		"jsonwebtoken": "^8.5.1"
+	}
 }
