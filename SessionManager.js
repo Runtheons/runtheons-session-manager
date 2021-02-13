@@ -4,8 +4,7 @@ const key = "RUNTHEONS";
 module.exports = new class SessionManager {
 
 	generateToken(data) {
-		var token = jwt.sign(
-			data,
+		var token = jwt.sign({ data },
 			key, {
 				expiresIn: "2 days"
 			}
@@ -21,8 +20,7 @@ module.exports = new class SessionManager {
 			var data = jwt.verify(token, key);
 			return data;
 		} catch (err) {
-			console.log(err);
-			return {};
+			return undefined;
 		}
 	}
 }
