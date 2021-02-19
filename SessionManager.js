@@ -22,7 +22,7 @@ module.exports = new class SessionManager {
 
 		try {
 			var data = jwt.verify(token, key);
-			return data;
+			return data.data;
 		} catch (err) {
 			return undefined;
 		}
