@@ -1,7 +1,14 @@
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
 
 module.exports = class SessionManager {
+	static JWTkey = null;
+
 	static key = null;
+
+	static setJWTKey(JWTkey) {
+		this.JWTkey = JWTkey;
+	}
 
 	static setKey(key) {
 		this.key = key;
@@ -16,10 +23,10 @@ module.exports = class SessionManager {
 	}
 
 	generateToken(data) {
-		if (SessionManager.key == null) {
-			throw new Error('Please set SessionManager key');
+		if (SessionManager.JWTkey == null) {
+			throw new Error('Please set SessionManager JWTkey');
 		}
-		var token = jwt.sign({ data }, SessionManager.key, this.option);
+		var token = jwt.sign({ data }, SessionManager.JWTkey, this.option);
 		return token;
 	}
 
@@ -27,7 +34,7 @@ module.exports = class SessionManager {
 		if (token == null) return {};
 
 		try {
-			var data = jwt.verify(token, SessionManager.key);
+			var data = jwt.verify(token, SessionManager.JWTkey);
 			return data.data;
 		} catch (err) {
 			return undefined;
