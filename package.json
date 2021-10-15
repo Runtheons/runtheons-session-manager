@@ -3,7 +3,23 @@
 	"version": "1.2.1",
 	"description": "",
 	"main": "index.js",
-	"scripts": {},
+	"dependencies": {
+		"crypto": "^1.0.1",
+		"jsonwebtoken": "^8.5.1"
+	},
+	"devDependencies": {
+		"jest": "^27.2.2"
+	},
+	"jest": {
+		"testEnvironment": "node",
+		"coveragePathIgnorePatterns": [
+			"/node_modules/"
+		]
+	},
+	"scripts": {
+		"test": "jest --verbose ./test/*",
+		"testOnFile": "jest --json --outputFile=test.json ./test/*"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Zexal0807/runtheons-session-manager.git"
@@ -13,8 +29,5 @@
 	"bugs": {
 		"url": "https://github.com/Zexal0807/runtheons-session-manager/issues"
 	},
-	"homepage": "https://github.com/Zexal0807/runtheons-session-manager#readme",
-	"dependencies": {
-		"jsonwebtoken": "^8.5.1"
-	}
+	"homepage": "https://github.com/Zexal0807/runtheons-session-manager#readme"
 }
