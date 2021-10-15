@@ -6,9 +6,9 @@ const ENCRYPTION_INPUT_ENCODING = 'utf-8';
 const ENCRYPTION_OUTPUT_ENCODING = 'hex';
 
 module.exports = class SessionManager {
-	static JWTkey = null;
+	static JWTkey = 'RUNTHEONS';
 
-	static key = null;
+	static key = 'RUNTHEONS';
 
 	static setJWTKey(JWTkey) {
 		this.JWTkey = JWTkey;
