@@ -1,10 +1,14 @@
-const jwt = require("jsonwebtoken");
-const key = "RUNTHEONS";
+const jwt = require('jsonwebtoken');
 
 module.exports = class SessionManager {
+	static key = null;
+
+	static setKey(key) {
+		this.key = key;
+	}
 
 	option = {
-		expiresIn: "2 days"
+		expiresIn: '2 days'
 	};
 
 	setOption(option) {
@@ -12,16 +16,18 @@ module.exports = class SessionManager {
 	}
 
 	generateToken(data) {
-		var token = jwt.sign({ data }, key, this.option);
+		if (SessionManager.key == null) {
+			throw new Error('Please set SessionManager key');
+		}
+		var token = jwt.sign({ data }, SessionManager.key, this.option);
 		return token;
 	}
 
 	extractData(token) {
-		if (token == null)
-			return {};
+		if (token == null) return {};
 
 		try {
-			var data = jwt.verify(token, key);
+			var data = jwt.verify(token, SessionManager.key);
 			return data.data;
 		} catch (err) {
 			return undefined;
