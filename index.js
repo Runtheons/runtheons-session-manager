@@ -1,1 +1,1 @@
-module.exports = require("./SessionManager");
+module.exports = new(require('./SessionManager'))();

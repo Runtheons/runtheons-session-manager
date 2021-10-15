@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const key = "RUNTHEONS";
 
-module.exports = new class SessionManager {
+module.exports = class SessionManager {
 
 	option = {
 		expiresIn: "2 days"
@@ -27,4 +27,4 @@ module.exports = new class SessionManager {
 			return undefined;
 		}
 	}
-}
+};
