@@ -4,6 +4,7 @@ const crypto = require('crypto');
 const ENCRYPTION_ALGORITHM = 'aes256';
 const ENCRYPTION_INPUT_ENCODING = 'utf-8';
 const ENCRYPTION_OUTPUT_ENCODING = 'hex';
+const IV = 'RUNTHEONS-IV-16B';
 
 module.exports = class SessionManager {
 	static JWTkey = 'RUNTHEONS';
@@ -34,7 +35,12 @@ module.exports = class SessionManager {
 			throw new Error('Please set SessionManager key must be 32');
 		}
 		var token = jwt.sign({ data }, SessionManager.JWTkey, this.option);
-		var cipher = crypto.createCipher(ENCRYPTION_ALGORITHM, SessionManager.key);
+
+		var cipher = crypto.createCipheriv(
+			ENCRYPTION_ALGORITHM,
+			Buffer.from(SessionManager.key),
+			IV
+		);
 		var encrypted = cipher.update(
 			token,
 			ENCRYPTION_INPUT_ENCODING,
@@ -54,9 +60,10 @@ module.exports = class SessionManager {
 			throw new Error('Please set SessionManager key must be 32');
 		}
 		try {
-			var decipher = crypto.createDecipher(
+			var decipher = crypto.createDecipheriv(
 				ENCRYPTION_ALGORITHM,
-				SessionManager.key
+				Buffer.from(SessionManager.key),
+				IV
 			);
 			var decrypted = decipher.update(
 				token,
