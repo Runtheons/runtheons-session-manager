@@ -30,6 +30,9 @@ module.exports = class SessionManager {
 		if (SessionManager.JWTkey == null || SessionManager.key == null) {
 			throw new Error('Please set SessionManager JWTkey and key');
 		}
+		if (Buffer.from(SessionManager.key).length != 32) {
+			throw new Error('Please set SessionManager key must be 32');
+		}
 		var token = jwt.sign({ data }, SessionManager.JWTkey, this.option);
 		var cipher = crypto.createCipher(ENCRYPTION_ALGORITHM, SessionManager.key);
 		var encrypted = cipher.update(
@@ -46,6 +49,9 @@ module.exports = class SessionManager {
 
 		if (SessionManager.JWTkey == null || SessionManager.key == null) {
 			throw new Error('Please set SessionManager JWTkey and key');
+		}
+		if (Buffer.from(SessionManager.key).length != 32) {
+			throw new Error('Please set SessionManager key must be 32');
 		}
 		try {
 			var decipher = crypto.createDecipher(
