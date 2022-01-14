@@ -14,8 +14,6 @@ jobs:
         node-version: [12.x, 14.x, 16.x]
         os: ['ubuntu-latest', 'windows-latest', 'macOS-latest']
 
-    needs: build
-
     steps:
       - uses: actions/checkout@v2
       - name: Setup Node.js ${{ matrix.node-version }} on ${{ matrix.os }}
@@ -31,4 +29,3 @@ jobs:
       #    name: install-and-build
       - name: Unit test
         run: npm run test --if-present --if-present
-      #      build

@@ -12,4 +12,5 @@ jobs:
     uses: Zexal0807/runtheons-session-manager/.github/workflows/build.yml@master
 
   test:
+    needs: build
     uses: Zexal0807/runtheons-session-manager/.github/workflows/test.yml@master

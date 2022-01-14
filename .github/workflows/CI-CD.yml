@@ -11,4 +11,5 @@ jobs:
     uses: Zexal0807/runtheons-session-manager/.github/workflows/CI.yml@master
 
   CD:
+    needs: CI
     uses: Zexal0807/runtheons-session-manager/.github/workflows/deploy.yml@master
