@@ -11,4 +11,4 @@ on:
 
 jobs:
   build:
-    uses: Zexal0807/runtheons-session-manager/.github/workflows/build.yml@main
+    uses: Zexal0807/runtheons-session-manager/.github/workflows/build.yml@master
