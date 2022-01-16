@@ -7,4 +7,4 @@ on:
 
 jobs:
   test:
-    uses: Zexal0807/runtheons-CI-CD/.githubworkflows/test.yml@main
+    uses: Zexal0807/runtheons-CI-CD/.github/workflows/test.yml@main
