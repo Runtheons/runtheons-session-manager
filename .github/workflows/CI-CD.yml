@@ -7,9 +7,11 @@ on:
     branches: [master]
 
 jobs:
-  CI:
-    uses: Zexal0807/runtheons-session-manager/.github/workflows/CI.yml@master
+  test:
+    uses: Zexal0807/runtheons-CI-CD/workflows/test.yml@master
 
-  CD:
-    needs: CI
-    uses: Zexal0807/runtheons-session-manager/.github/workflows/deploy.yml@master
+  build:
+    uses: Zexal0807/runtheons-CI-CD/workflows/build.yml@master
+
+  deploy:
+    uses: Zexal0807/runtheons-CI-CD/workflows/deploy.yml@master

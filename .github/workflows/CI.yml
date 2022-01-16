@@ -1,16 +1,10 @@
 name: CI
 
 on:
-  workflow_call:
-
   workflow_dispatch:
 
   push:
 
 jobs:
-  build:
-    uses: Zexal0807/runtheons-session-manager/.github/workflows/build.yml@master
-
   test:
-    needs: build
-    uses: Zexal0807/runtheons-session-manager/.github/workflows/test.yml@master
+    uses: Zexal0807/runtheons-CI-CD/workflows/test.yml@master
