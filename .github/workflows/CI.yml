@@ -9,3 +9,7 @@ jobs:
   test:
     name: Test
     uses: Zexal0807/runtheons-CI-CD/.github/workflows/test.yml@main
+
+  test2:
+    name: Test
+    uses: Zexal0807/runtheons-CI-CD/.github/workflows/test.yml@master
