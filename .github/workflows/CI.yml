@@ -8,4 +8,4 @@ on:
 jobs:
   test:
     name: Test
-    uses: Zexal0807/runtheons-CI-CD/.github/workflows/test.yml@main
+    uses: Zexal0807/runtheons-CI-CD/.github/workflows/test.yml@v1.0
