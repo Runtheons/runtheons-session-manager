@@ -11,11 +11,15 @@ This reposity manage the session of Runtheons BackEnd
 
 ## Installation
 
-1. `npm install https://github.com/Zexal0807/runtheons-session-manager` to add the package to the project
+1. `npm install https://github.com/Zexal0807/runtheons-session-manager#v1.5.0` to add the package to the project
 
 # Usage
 
 Set the key
+
+**NB:**
+
+Key must have 32 chars (32 Bytes)
 
 ```javascript
 require('@runtheons/session-manager/SessionManager').setJWTKey(
@@ -28,8 +32,8 @@ require('@runtheons/session-manager/SessionManager').setKey(
 
 After set the key, there're two method:
 
-- [generateToken](https://github.com/Zexal0807/runtheons-session-manager#generateToken 'generateToken')
-- [extractData](https://github.com/Zexal0807/runtheons-session-manager#extractData 'extractData')
+- [generateToken](https://github.com/Runtheons/runtheons-session-manager#generateToken)
+- [extractData](https://github.com/Zexal0807/runtheons-session-manager#extractData)
 
 ## generateToken
 
