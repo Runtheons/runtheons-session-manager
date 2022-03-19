@@ -11,7 +11,7 @@ This reposity manage the session of Runtheons BackEnd
 
 ## Installation
 
-1. `npm install https://github.com/Zexal0807/runtheons-session-manager#v1.5.0` to add the package to the project
+1. `npm install https://github.com/Zexal0807/runtheons-session-manager#v1.5.1` to add the package to the project
 
 # Usage
 
