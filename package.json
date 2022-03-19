@@ -21,8 +21,8 @@
 		"jest": "^27.2.2"
 	},
 	"scripts": {
-		"test": "jest --verbose ./test/*",
-		"testOnFile": "jest --json --outputFile=test.json ./test/*"
+		"test": "jest --verbose ./test/* --coverage",
+		"testOnFile": "jest --json --outputFile=test.json ./test/* --coverage"
 	},
 	"jest": {
 		"testEnvironment": "node",
