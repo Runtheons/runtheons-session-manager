@@ -1,4 +1,4 @@
-name: CI
+name: Test
 
 on:
   workflow_dispatch:
@@ -6,6 +6,16 @@ on:
   push:
 
 jobs:
-  test:
-    name: Test
-    uses: Zexal0807/runtheons-CI-CD/.github/workflows/test.yml@v1.0
+  main:
+    runs-on: 'ubuntu-latest'
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js 14.x on "ubuntu-latest"
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - name: Instal dependencies
+        run: npm install --save --legacy-peer-deps
+      - name: Unit test
+        run: npm run test --if-present
